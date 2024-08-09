@@ -1,0 +1,371 @@
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    height: 150px;         
+    margin-top: 20px;
+}
+
+.paragraph-container1 {
+    padding: 15px;
+    max-width: 750px;
+    margin: -20px auto 10px auto;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+}
+
+.main-btn {
+    display: flex;             
+    justify-content: center; 
+    align-items: center;    
+    margin: 10px;
+    /*margin: 20px auto 50px auto;*/
+    height: 60px;             
+    width: 320px;            
+    font-size: 20px;
+    color: white;
+    background-color: #004578;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+    padding: 0 20px; 
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*-----------------------------------------------*/
+.back-button-container {
+    position: fixed;
+    top: 30px;
+    left: 60px; 
+    z-index: 10;
+}
+.back-btn {
+    font-size: 24px;
+    background-color: transparent;
+    padding: 4px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #003355;
+}
+
+/*-----------------------------------------------*/
+/* learn.html */
+h3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0; 
+    background: #71afe5;
+    color: #013c60;
+    font-size: 40px;
+    text-align: center;
+    z-index: 10; 
+}
+
+
+h3::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px; 
+    background: #71afe5;
+    z-index: -1; 
+}
+
+
+.fallacy-container {
+    width: 80%;
+    margin: 75px auto 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.fallacy {
+    padding: 10px 0; 
+    margin: 15px auto; 
+    border-bottom: 1px solid #eee;
+}
+
+.fallacy:last-child {
+    border-bottom: none; 
+}
+
+.fallacy h2 {
+    font-size: 24px;
+    margin: 10px auto; 
+    text-align: center;
+}
+
+.fallacy p {
+    font-size: 18px;
+    line-height: 1.6; 
+}
+
+/*-----------------------------------------------*/
+/*instructions.html*/
+.instructions-container {
+    background-color: white;
+    color: #013c60;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.instructions-container h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.objective-text, .goodluck-text {
+    color: #004578; 
+}
+
+.instructions-container p, 
+.instructions-container li {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.instructions-container ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center; 
+    display: inline-block;
+}
+
+
+/*-----------------------------------------------*/
+body {
+    background-color: #71afe5;
+    color: #013c60;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    padding: 20px 0 30px 0;
+    text-align: center;
+    background: #71afe5;
+    color: #013c60;
+    font-size: 40px;
+}
+
+
+.correctMessage {
+    font-size: 24px; 
+    margin-bottom: 30px; 
+}
+
+.fallacies-button-container {
+    position: fixed;
+    top: 25px;
+    right: 60px;
+    z-index: 10;
+}
+
+#showFallaciesBtn {
+    padding: 10px 20px;
+    background-color: #004578;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#showFallaciesBtn:hover {
+    background-color: #003355;
+}
+
+.fallacies-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(16, 110, 190, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.fallacies-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.fallacies-panel li {
+    padding: 8px 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid #71afe5;
+}
+
+.fallacies-panel li:last-child {
+    border-bottom: none;
+}
+
+.container {
+    max-width: 750px;
+    margin: -20px auto 10px auto;
+    background-color: #106ebe;
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.paragraph-container {
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #106ebe;
+    color: white;
+    font-size: 24px;
+}
+
+.prompt {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.explanation {
+    background-color: #71afe5;
+    color: #013c60;
+    font-size: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.center-form {
+    display: block; 
+    text-align: center;
+}
+
+.center-form p, 
+.center-form input[type="text"], 
+.center-form input[type="submit"] {
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+input[type="submit"], input[type="text"] {
+    display: block;
+    margin: 15px auto; /* this will center block elements */
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 50px;
+    width: 250px;
+    font-size: 20px;
+    color: white;
+    background-color: #004578;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input[type="text"] {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px 15px;
+    width: 300px;
+}
+
+/* Enclosing container for radio options */
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+/* Styles for each radio option */
+input[type="radio"] + label {
+    flex-basis: calc(50% - 10px); 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.message-container {
+    text-align: center;
+    width: 100%;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #106ebe;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #003355;
+}
+
+label:hover {
+    background-color: #003355;
+}
+
+label:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #71afe5;
+}

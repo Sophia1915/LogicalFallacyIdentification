@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXBY6MZY63"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LXBY6MZY63');
+  </script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Logical Fallacy Identification</title>
+</head>
+<body>
+
+<div class="fallacies-button-container">
+    {% if not options and not explanation %}
+        <button id="showFallaciesBtn">Show Fallacies</button>
+    {% endif %}
+</div>
+  
+<h1>Practice</h1>
+
+<p class="correctMessage">{{ message }}</p>
+
+<div class="back-button-container">
+    <a href="/index" class="back-btn">&#8592;</a> 
+</div>
+
+
+  
+<div id="fallaciesPanel" class="fallacies-panel">
+    <ul>
+        {% for fallacy in fallacies %}
+            <li>{{ fallacy }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="container">
+    <div class="paragraph-container">
+        <p>{{ responses[0] }}</p>
+    </div>
+</div>
+
+<div class="form-container">
+
+    {% if explanation %}
+    <div class="explanation">
+        <p>{{ explanation }}</p>
+    </div>
+    <form action="/continue" method="post">
+        <input type="submit" value="Continue">
+    </form>
+    {% elif session['show_explanation'] %}
+    <div class="explanation">
+        <p>{{ responses[1] }}</p>
+    </div>
+    <form action="/continue" method="post">
+        <input type="submit" value="Continue">
+    </form>
+
+    {% elif options %}
+    <form action="/" method="post">
+        <div class="message-container">
+            <p>Select the correct logical fallacy:</p>
+        </div>
+        {% for option in options %}
+        <input type="radio" id="{{ option }}" name="answer" value="{{ option }}" required>
+        <label for="{{ option }}">{{ option }}</label>
+        {% endfor %}
+        <div style="clear:both;"></div>  
+        <input type="submit" value="Submit">
+    </form>
+
+    {% else %}
+    <form action="/" method="post" class="center-form">
+        <p>Guess the logical fallacy</p>
+        <input type="text" name="answer" autocomplete="off" required>
+        <input type="submit" value="Submit">
+    </form>
+    
+    </form>
+    {% endif %}
+</div>
+
+<script>
+    document.getElementById('showFallaciesBtn').addEventListener('click', function() {
+    var panel = document.getElementById('fallaciesPanel');
+    var button = document.getElementById('showFallaciesBtn');
+    if(panel.style.width === '250px') {
+        panel.style.width = '0';
+        button.innerText = "Show Fallacies";
+    } else {
+        panel.style.width = '250px';
+        button.innerText = "Hide Fallacies";
+    }
+});
+
+
+</script>
+  
+</body>
+</html>
+

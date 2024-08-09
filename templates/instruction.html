@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXBY6MZY63"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LXBY6MZY63');
+  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Instructions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Game Instructions</h1>
+    
+    <div class="instructions-container">
+        <ul>
+            <li><strong>Given Statement:</strong> You will be presented with a statement that contains a logical fallacy.</li>
+            <li><strong>First Attempt:</strong> Try to correctly identify the logical fallacy in the statement. If you can't recall a particular fallacy's name, click the “Show Fallacies” button in the top right corner for assistance. If your first guess is correct, you'll proceed to the next statement.</li>
+            <li><strong>Second Attempt:</strong> If your first guess was incorrect, don't worry! You'll be given a multiple-choice question to help pinpoint the right fallacy.</li>
+            <li><strong>Feedback:</strong> If you're unable to identify the fallacy on the second attempt, you'll receive an explanation detailing which fallacy was present and why.</li>
+        </ul>
+        <p class="goodluck-text">Good luck and have fun sharpening your rhetorical skills!</p>
+        
+        <!-- Button to proceed to the game -->
+        <div class="buttons-container">
+            <a href="/game" class="main-btn">Start the Game</a>
+        </div>
+    </div>
+</body>
+</html>

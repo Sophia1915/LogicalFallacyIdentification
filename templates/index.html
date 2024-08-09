@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXBY6MZY63"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LXBY6MZY63');
+  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Logical Fallacy Identification</h1>
+
+    <div class="paragraph-container1">
+        <p>Logical fallacies are errors in reasoning that undermine the logic of an argument. Although they can appear convincing, they often lack evidence, are based on weak premises, or are otherwise invalid. Understanding these fallacies will help you find flaws in your opponent's arguments and strengthen your own position.</p>
+    </div>
+   
+
+    <div class="buttons-container">
+        <a href="/learn" id="learnBtn" class="main-btn">Learn about Logical Fallacies</a>
+        <a href="/instruction" id="startGameBtn" class="main-btn">Practice Identifying Logical Fallacies</a>
+    </div>
+
+</body>
+
+</html>
